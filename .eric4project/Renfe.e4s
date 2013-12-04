@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Session SYSTEM "Session-4.4.dtd">
+<!-- eric4 session file for project Renfe -->
+<!-- This file was generated automatically, do not edit. -->
+<!-- Saved: 2013-12-03, 19:52:50 -->
+<Session version="4.4">
+  <Filenames>
+    <Filename cline="0" cindex="0" folds="" zoom="0">/home/albert/Programacio/python/trens/renfe.py</Filename>
+    <Filename cline="28" cindex="73" folds="" zoom="0">/home/albert/Programacio/python/trens/dom_element.py</Filename>
+    <Filename cline="10" cindex="56" folds="" zoom="0">/home/albert/Programacio/python/trens/test_dom_element.py</Filename>
+  </Filenames>
+  <ActiveWindow cline="28" cindex="73">/home/albert/Programacio/python/trens/dom_element.py</ActiveWindow>
+  <Breakpoints>
+  </Breakpoints>
+  <Watchexpressions>
+  </Watchexpressions>
+  <DebugInfo>
+    <CommandLine></CommandLine>
+    <WorkingDirectory></WorkingDirectory>
+    <Environment></Environment>
+    <ReportExceptions value="True" />
+    <Exceptions>
+    </Exceptions>
+    <IgnoredExceptions>
+    </IgnoredExceptions>
+    <AutoClearShell value="True" />
+    <TracePython value="False" />
+    <AutoContinue value="True" />
+    <CovexcPattern></CovexcPattern>
+  </DebugInfo>
+  <Bookmarks>
+  </Bookmarks>
+</Session>
