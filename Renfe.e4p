@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE Project SYSTEM "Project-4.6.dtd">
 <!-- eric4 project file for project Renfe -->
-<!-- Saved: 2013-12-02, 22:41:03 -->
+<!-- Saved: 2013-12-06, 23:51:22 -->
 <!-- Copyright (C) 2013 Albert,  -->
 <Project version="4.6">
   <Language>en</Language>
@@ -16,6 +16,7 @@
     <Source>__init__.py</Source>
     <Source>dom_element.py</Source>
     <Source>test_dom_element.py</Source>
+    <Source>web_parser.py</Source>
   </Sources>
   <Forms>
   </Forms>
