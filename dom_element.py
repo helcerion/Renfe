@@ -90,20 +90,14 @@ class DOMElement:
         return self._attr
     
     def get_attr(self, attr):
-        result = None
-        if self._attr.has_key(attr):
-            result = self._attr[attr]
-        return result
+        return self._attr.get(attr)
     
     def add_list_ids(self,  ids):
         for k in ids.keys():
             self._listIds[k] = ids[k]
     
     def getElementById(self, id):
-        result = None
-        if self._listIds.has_key(id):
-            result = self._listIds[id]
-        return result
+        return self._listIds.get(id)
     
     def add_list_classes(self,  classes):
         for k in classes.keys():
@@ -115,10 +109,7 @@ class DOMElement:
                 self._listClasses[k] = [classes[k]]
     
     def getElementsByClass(self, classe):
-        result = []
-        if self._listClasses.has_key(classe):
-            result = self._listClasses[classe]
-        return result
+        return self._listClasses.get(classe, [])
     
     def add_list_names(self,  names):
         for k in names.keys():
@@ -130,7 +121,7 @@ class DOMElement:
                 self._listNames[k] = [names[k]]
     
     def getElementsByName(self, name):
-        return self._listNames[name]
+        return self._listNames.get(name)
     
     def add_list_tags(self, tags):
         for k in tags.keys():
@@ -142,7 +133,7 @@ class DOMElement:
                 self._listTags[k] = [tags[k]]
     
     def getElementsByTag(self,  tag):
-        return self._listTags[tag]
+        return self._listTags.get(tag, [])
     
     def set_text(self, text):
         self._text = text
