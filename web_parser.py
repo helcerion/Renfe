@@ -10,10 +10,12 @@ from dom_element import DOMElement
 import urllib2
 from urllib import urlencode
 
+
 class WebParser(HTMLParser):
     dom = None
     currentElement = None
     body = 0
+
     def handle_starttag(self, tag, attrs):
         if tag == "body":
             self.body = 1
