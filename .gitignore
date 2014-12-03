@@ -37,6 +37,7 @@ nosetests.xml
 
 # Eric IDE
 .eric4project
+*.e4p
 
 # IDEA
 .idea
