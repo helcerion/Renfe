@@ -78,7 +78,7 @@ class TestDOMElement(unittest.TestCase):
         self.assertEqual("<div class='divClass1' id='divId'><div class='divClass2'><p name='pName'></p></div></div>", str(self.div))
     
     def test_getElementByTag1(self):
-        self.assertEqual("<p></p>", str(self.root.getElementsByTag('p')[0]))
+        self.assertEqual("<p></p>", str(self.root.get_elements_by_tag('p')[0]))
 
 if __name__ == "__main__":
     unittest.main()

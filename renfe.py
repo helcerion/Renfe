@@ -47,13 +47,13 @@ def stations():
     page = get_page(url, data)
     p = WebParser()
     p.feed(page)
-    station_list = p.dom.getElementsByClass('RodaliesList')[0]
-    station_list = station_list.getElementsByTag('li')
+    station_list = p.dom.get_elements_by_class('RodaliesList')[0]
+    station_list = station_list.get_elements_by_tag('li')
     result = {}
     for sl in station_list:
         station_id = sl.get_id()[9:]
-        station_name_elem = sl.getElementsByClass('stationName')[0]
-        station_name_elem = station_name_elem.getElementsByTag('xml-fragment')[0]
+        station_name_elem = sl.get_elements_by_class('stationName')[0]
+        station_name_elem = station_name_elem.get_elements_by_tag('xml-fragment')[0]
         station_name = station_name_elem.get_text()
         result[station_id] = station_name
     return result
@@ -77,16 +77,16 @@ def schedule(destination, now):
     p = WebParser()
     p.feed(page)
 
-    timetables = p.dom.getElementById('timetablesTable')
-    schedules = timetables.getElementsByTag('li')
+    timetables = p.dom.get_element_by_id('timetablesTable')
+    schedules = timetables.get_elements_by_tag('li')
 
     time_table = {}
 
     for schedule_item in schedules:
         item_id = schedule_item.get_id()
-        departure = schedule_item.getElementsByClass('departureTime')
-        arrival = schedule_item.getElementsByClass('arrivalTime')
-        triptime = schedule_item.getElementById('tripTimeText')
+        departure = schedule_item.get_elements_by_class('departureTime')
+        arrival = schedule_item.get_elements_by_class('arrivalTime')
+        triptime = schedule_item.get_element_by_id('tripTimeText')
         if departure != [] or arrival != []:
             time_table[item_id] = {'departureTime': departure[0].get_text(), 'arrivalTime': arrival[0].get_text(),
                                    'tripTime': triptime.get_text()}
