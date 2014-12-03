@@ -1,6 +1,7 @@
 import unittest
 from dom_element import DOMElement
 
+
 class TestDOMElement(unittest.TestCase):
     def setUp(self):
         self.de = DOMElement()
@@ -75,7 +76,8 @@ class TestDOMElement(unittest.TestCase):
         p = DOMElement(tag='p', name='pName')
         self.de.add_children(p)
         self.div.add_children(self.de)
-        self.assertEqual("<div class='divClass1' id='divId'><div class='divClass2'><p name='pName'></p></div></div>", str(self.div))
+        self.assertEqual("<div class='divClass1' id='divId'><div class='divClass2'><p name='pName'></p></div></div>",
+                         str(self.div))
     
     def test_getElementByTag1(self):
         self.assertEqual("<p></p>", str(self.root.get_elements_by_tag('p')[0]))

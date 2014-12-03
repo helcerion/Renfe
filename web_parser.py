@@ -1,14 +1,12 @@
-#-------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 # Name:        web_parser
 #
 # Author:      Albert
-#-------------------------------------------------------------------------------
+# ------------------------------------------------------------------------------
 #!/usr/bin/env python
 
 from HTMLParser import HTMLParser
 from dom_element import DOMElement
-import urllib2
-from urllib import urlencode
 
 
 class WebParser(HTMLParser):
