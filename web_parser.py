@@ -9,10 +9,13 @@ from HTMLParser import HTMLParser
 from dom_element import DOMElement
 
 
-class WebParser(HTMLParser):
+class WebParser(object, HTMLParser):
     dom = None
     currentElement = None
     body = 0
+
+    def __init__(self):
+        super(WebParser, self).__init__()
 
     def handle_starttag(self, tag, attrs):
         if tag == "body":
